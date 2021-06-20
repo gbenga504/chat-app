@@ -1,7 +1,18 @@
 import { memo } from 'react';
+import { Box, makeStyles } from '@material-ui/core';
 
-const ChatInterface = () => {
-  return <span>Ready to code!!!</span>;
+import ChatBackgroundImage from './assets/chat_background.png';
+
+const App = () => {
+  const classes = useStyles();
+
+  return <Box position="relative" width="100vw" height="100vh" className={classes.container}></Box>;
 };
 
-export default memo(ChatInterface);
+const useStyles = makeStyles({
+  container: {
+    backgroundImage: `url(${ChatBackgroundImage})`,
+  },
+});
+
+export default memo(App);
