@@ -16,22 +16,15 @@ const ComposeBox = ({ onSend }) => {
   };
 
   return (
-    <Box
-      position="absolute"
-      width="100vw"
-      bottom={0}
-      left={0}
-      minHeight="1rem"
-      className={classes.container}>
+    <Box position="relative" width="100vw" className={classes.container}>
       <MaxWidthContainer>
-        <Box display="flex" my={4} mx={matches ? 4 : 12}>
+        <Box display="flex" py={4} px={matches ? 4 : 12}>
           <TextField
             variant="outlined"
             fullWidth
             multiline
             rows={1}
             rowsMax={5}
-            size="large"
             value={message}
             onChange={(evt) => setMessage(evt.target.value)}
             placeholder="Message"
