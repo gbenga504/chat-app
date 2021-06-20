@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Box } from '@material-ui/core';
 
 const MaxWidthContainer = ({ children, className }) => (
-  <Box height="auto" maxWidth={640} margin="auto" className={className}>
+  <Box height="100%" maxWidth={640} margin="auto" className={className}>
     {children}
   </Box>
 );
