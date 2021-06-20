@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import { Box, makeStyles } from '@material-ui/core';
 
-import ChatBackgroundImage from './assets/chat_background.png';
+import ChatBackgroundImage from 'assets/chat_background.png';
 
 const App = () => {
   const classes = useStyles();
