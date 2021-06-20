@@ -18,7 +18,7 @@ export default function ThemeConfig({ children }) {
   };
 
   const theme = createMuiTheme(themeOptions);
-  theme.components = componentsOverride(theme);
+  theme.overrides = componentsOverride(theme);
 
   return (
     <StylesProvider injectFirst>

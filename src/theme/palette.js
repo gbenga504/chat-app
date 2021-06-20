@@ -3,8 +3,8 @@ const PRIMARY = {
   dark: '#2C76A5',
 };
 const SECONDARY = {
-  main: '#3998D3',
-  dark: '#3998D3',
+  main: '#FF876D',
+  dark: '#FF876D',
 };
 const WARNING = {
   main: '#FDF6C3',
