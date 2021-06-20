@@ -22,9 +22,9 @@ const App = () => {
       containerRef.current.addEventListener('scroll', handleScrollNotification);
     }
 
+    const cleanUpContainerRef = containerRef.current;
     return () => {
-      console.log('gad', containerRef);
-      containerRef && containerRef.removeEventListener('scroll', handleScrollNotification);
+      cleanUpContainerRef.removeEventListener('scroll', handleScrollNotification);
     };
   }, [handleScrollNotification]);
 
