@@ -1,15 +1,20 @@
 export default function Button(theme) {
   return {
     MuiButton: {
-      styleOverrides: {
-        root: {
-          '&:hover': {
-            boxShadow: 'none',
-          },
+      root: {
+        color: 'red',
+        '&:hover': {
+          boxShadow: 'none',
         },
-        sizeLarge: {
-          height: 48,
-        },
+      },
+      sizeLarge: {
+        height: 53,
+      },
+      containedSecondary: {
+        color: theme.palette.common.white,
+      },
+      containedPrimary: {
+        color: theme.palette.common.white,
       },
     },
   };
