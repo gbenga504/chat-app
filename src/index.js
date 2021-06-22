@@ -1,14 +1,31 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { QueryClientProvider, QueryClient } from 'react-query';
 
 import ThemeConfig from 'theme';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+const reactQueryConfig = {
+  refetchOnWindowFocus: false,
+  retry: false,
+};
+
+const defaultOptions = {
+  queries: reactQueryConfig,
+  mutations: reactQueryConfig,
+};
+
+const queryClient = new QueryClient({
+  defaultOptions,
+});
+
 ReactDOM.render(
   <React.StrictMode>
     <ThemeConfig>
-      <App />
+      <QueryClientProvider client={queryClient}>
+        <App />
+      </QueryClientProvider>
     </ThemeConfig>
   </React.StrictMode>,
   document.getElementById('root'),
