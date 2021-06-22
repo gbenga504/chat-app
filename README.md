@@ -11,11 +11,11 @@ A simple chat interface
 
 ## Dependencies
 
-- @material-ui/core: This library was used as the core of our design system. As much as possible, we try to use theming throughout the entire system without hardcoding anything.
+- @material-ui/core: This library was used as the core of our design system. Using tailwind would have sufficed also. As much as possible, I try to use theming throughout the entire system without hardcoding anything.
 
 - date-fns: Used for time formatting.
 
-- react-query: Used to synchronize data between the server and our react app. Also react-query maintains an internal cache we can leverage on so there wasn't any need to include redux
+- react-query: Used to synchronize data between the server and our react app. Also react-query maintains an internal cache I can leverage on so there wasn't any need to include redux
 
 - Husky, prettier and lint-staged: For pre-commit hooks
 
@@ -23,7 +23,7 @@ A simple chat interface
 
 - I think the solution can be built for production and hosted locally or remotely while Gzipped to enhance performance, this is an area that can be improved upon
 
-- Currently, we do not handle scenarios where a user has a bad network and tries to send a message. As an improvement, we can use a background service using service workers to organize retries
+- Currently, I did not handle scenarios where a user has a bad network and tries to send a message. As an improvement, I can use a background service using service workers to organize retries
 
 - Errors are not properly being handled yet
 
