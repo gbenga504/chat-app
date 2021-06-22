@@ -4,7 +4,7 @@ import { Box, makeStyles, Paper, Typography } from '@material-ui/core';
 import { format } from 'date-fns';
 import classNames from 'classnames';
 
-const Message = ({ name, body, date, isSender }) => {
+const Message = ({ author, body, date, isSender }) => {
   const classes = useStyles();
 
   return (
@@ -20,7 +20,7 @@ const Message = ({ name, body, date, isSender }) => {
         className={classNames(classes.messageContentBox, { messageOut: isSender })}>
         {!isSender && (
           <Typography variant="body2" color="textSecondary">
-            {name}
+            {author}
           </Typography>
         )}
         <Typography variant="body2" color="textPrimary">
@@ -47,7 +47,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 Message.propTypes = {
-  name: PropTypes.string,
+  id: PropTypes.string,
+  author: PropTypes.string,
   body: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
   isSender: PropTypes.bool,
