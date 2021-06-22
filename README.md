@@ -21,6 +21,8 @@ A simple chat interface
 
 ## Improvements
 
+- I think the solution can be built for production and hosted locally or remotely while Gzipped to enhance performance, this is an area that can be improved upon
+
 - Currently, we do not handle scenarios where a user has a bad network and tries to send a message. As an improvement, we can use a background service using service workers to organize retries
 
 - Errors are not properly being handled yet
